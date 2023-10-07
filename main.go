@@ -62,4 +62,34 @@ func main() {
 	// Nota : No esta mal colocar el break al fial de cada caso pero no
 	// es necesario
 
+
+	// ########  declaracion bucle for  ########
+
+	// con variable inicializada fuera del bucle
+	var i int
+	for i <= 10 {
+		fmt.Println(i)
+		i++
+	}
+
+	// con variable inicializada dentro del bucle
+	for i := 1 ; i <= 10 ; i++ {
+		fmt.Println(i)
+	}
+
+	// usando break para termina el programa 
+	for i := 1 ; i <= 10 ; i++ {
+		fmt.Println(i)
+		if i ==5 {
+			break  
+		}
+	}
+
+	// usando continue para saltar a la siguiente iteracion   
+	for i := 1 ; i <= 10 ; i++ {
+		if i ==5 {
+			continue  
+		}
+		fmt.Println(i)
+	}
 }
