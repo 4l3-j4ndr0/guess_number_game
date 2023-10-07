@@ -92,4 +92,60 @@ func main() {
 		}
 		fmt.Println(i)
 	}
+
+	// ########  LLAMANDO FUNCIONES PROPIAS  ########
+
+	hello()
+
+	hello2("Ale")
+
+	temp := hello3("Alejo")
+	fmt.Printf("Hola %s, soy una funcion propia con parametro usando return \n",temp)
+
+	temp2 := calc(2,3)
+	fmt.Printf("El calculo es %d \n", temp2)
+
+	suma, multiplicacion := calc2(2,3)
+	fmt.Printf("la suma es %d y la multiplicacion es %d \n", suma, multiplicacion)
+
+	// otra forma de la funcion de arriba
+	suma2, multiplicacion2 := calc3(2,3)
+	fmt.Printf("la suma es %d y la multiplicacion es %d \n", suma2, multiplicacion2)
+}
+
+
+// ########  CREANDO FUNCIONES PROPIAS  ########
+
+// funcion simple
+func hello() {
+		fmt.Println("Hola , soy una funcion propia simple")
+}
+
+// funcion con parametro
+func hello2(name string) {
+	fmt.Printf("Hola %s, soy una funcion propia con parametro \n",name)
+}
+
+// funcion con parametro y devolucion
+func hello3(name string) string {
+	return name
+}
+
+// funcion con varios parametros y devolucion de 1 valor
+func calc(a, b int) int {
+	return a+b
+}
+
+// funcion con varios parametros y devolucion de 2 valores
+func calc2(a, b int) (int , int) {
+	suma := a+b
+	multiplicacion := a*b
+	return suma, multiplicacion
+}
+
+// otra variante de la misma funcion de arriba
+func calc3(a, b int) (suma , multiplicacion int) {
+	suma = a+b
+	multiplicacion = a*b
+	return  // no es necesario espesificar q devuelve pq se especifico en los parametros
 }
